@@ -31,9 +31,15 @@
   (let [fields (re-seq #"(byr|iyr|eyr|hgt|hcl|ecl|pid):(#{0,1}[\d|a-z]+)" passport)]
     (and (= 7 (count fields))
 <<<<<<< HEAD
+<<<<<<< HEAD
          (every? valid-field? fields))))
 
 (defn day4-2 []
+=======
+         (every? #(and (some? %) (not (false? %))) (map valid-field? fields)))))
+
+(defn day4-1 []
+>>>>>>> 2749eb554812233338a5fe55b73d80ed03ae2ac9
 =======
          (every? #(and (some? %) (not (false? %))) (map valid-field? fields)))))
 
