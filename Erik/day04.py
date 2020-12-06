@@ -2,8 +2,8 @@ import re
 password_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid"]
 check_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 
-with open("Advent-of-Code-2020/Erik/inputs/day04.txt", "r") as f:
-#with open("Advent-of-Code-2020/Erik/inputs/day04-t1.txt", "r") as f:
+with open("Erik/inputs/day04.txt", "r") as f:
+#with open("Erik/inputs/day04-t1.txt", "r") as f:
     raw_data2 = f.read().split("\n\n")
 
 def make_dict(raw):
@@ -76,5 +76,5 @@ def part_two(data, req_fields):
     return counter
 
 nice_data = make_dict(raw_data2)
-print(part_one(nice_data, check_fields))
-print(part_two(nice_data, check_fields))
+print(f"{part_one(nice_data, check_fields)} passports are valid if only considering present fields")
+print(f"{part_two(nice_data, check_fields)} passports are valid if also validating the data in those fields")

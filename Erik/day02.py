@@ -7,7 +7,7 @@
 test_data = ["1-3 a: abcde","1-3 b: cdefg","2-9 c: ccccccccc"]
 raw_data = []
 
-with open("Advent-of-Code-2020/Erik/inputs/day02.txt", "r") as f:
+with open("Erik/inputs/day02.txt", "r") as f:
     for line in f:
         raw_data.append(line.strip())
 
@@ -49,4 +49,4 @@ def part_two(nice_data):
 
 work_data = parse_data(raw_data)
 print(part_one(work_data), "passwords conforming to the rules.")
-print(part_two(work_data), "passwords conforming to new rules")
+print(part_two(work_data), "passwords conforming to the new rules")

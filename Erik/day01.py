@@ -1,8 +1,8 @@
 import os
 
 inp = []
-with open("Advent-of-Code-2020/Erik/inputs/day01.txt", "r") as f:
-#with open("Advent-of-Code-2020/Erik/inputs/day01-t1.txt", "r") as f:
+with open("Erik/inputs/day01.txt", "r") as f:
+#with open("Erik/inputs/day01-t1.txt", "r") as f:
     for line in f:
         inp.append(int(line.strip()))
 
@@ -14,11 +14,10 @@ for i in range(len(inp)):
         if((inp[i]+inp[j]) == 2020):
             numA = inp[i]
             numB = inp[j]
-            print(numA, numB, (numA * numB))
             break
     if(numA > 0):
         break
-
+print(f"The two numbers are {numA} and {numB}, the product is: {numA*numB}")
 
 # Part Two
 numA = 0
@@ -31,10 +30,9 @@ for i in range(len(inp)):
                 numA = inp[i]
                 numB = inp[j]
                 numC = inp[n]
-                print(numA, numB, numC, (numA * numB * numC))
                 break
         if(numA > 0):
             break
     if(numA > 0):
         break
-
+print(f"The numbers are {numA}, {numB} and {numC}. The product is: {numA*numB*numC}")

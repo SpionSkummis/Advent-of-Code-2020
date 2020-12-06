@@ -1,7 +1,7 @@
-
+# There are cases which this code will not solve properly
 all_passes = []
 with open("Erik/inputs/day05.txt", "r") as f:
-#with open("Advent-of-Code-2020/Erik/inputs/day04-t1.txt", "r") as f:
+#with open("Erik/inputs/day05-t1.txt", "r") as f:
     for line in f:
         all_passes.append(line.strip())
 

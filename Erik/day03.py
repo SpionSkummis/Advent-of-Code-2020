@@ -1,7 +1,7 @@
 my_map = []
 
-with open("Advent-of-Code-2020/Erik/inputs/day03.txt", "r") as f:
-#with open("Advent-of-Code-2020/Erik/inputs/day03-t1", "r") as f:
+with open("Erik/inputs/day03.txt", "r") as f:
+#with open("Erik/inputs/day03-t1", "r") as f:
     for line in f:
         my_map.append(line.strip())
 
@@ -32,4 +32,4 @@ def part_two(instructions, grid_map):
 print(f"In part one, {collision_counter(3,1,my_map)} trees would be hit")
 
 part_two_ratios = ((1,1),(3,1),(5,1),(7,1),(1,2))
-print(f"The answer for part two is: {part_two(part_two_ratios,my_map)}")
+print(f"The product of the numbers of trees hit using the 5 specified directions is: {part_two(part_two_ratios,my_map)}")
