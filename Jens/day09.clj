@@ -24,14 +24,14 @@
                                                h))))))
 
 (defn day9-1 [in]
-  (loop [[window remaining] (map #(into [] %) (split-at 5 in))]
+  (loop [[window remaining] (map #(into [] %) (split-at 25 in))]
     (if (sum-two-to (first remaining) window)
       (recur [(conj (subvec window 1) (first remaining))
               (next remaining)])
       (first remaining))))
 
 (defn sum-from-start [s l]
-  #dbg (loop [sum 0
+  (loop [sum 0
          lst l
          i   0]
     (cond
