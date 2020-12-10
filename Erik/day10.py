@@ -9,7 +9,6 @@ jolt_temp.append(0)
 jolt_temp.append(max(jolt_data)+3)
 jolt_sorted = sorted(jolt_temp)
 
-
 jump_dict = dict()
 
 for i in range(1,4):
@@ -20,10 +19,6 @@ for i in range(1,len(jolt_sorted)):
 
 #print(jump_dict)
 print(f"The answer to part one is: {jump_dict[1] * jump_dict[3]}")
-
-
-
-
 
 def split_groups(sort_list):
     split_lists = []
@@ -53,7 +48,6 @@ def find_combinations(small_list):
     else:
         print("Too long list, calculate moar!")
         return 0
-
 
 def get_total_combinations(in_list):
     combinations = 1
