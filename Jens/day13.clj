@@ -12,9 +12,6 @@
 
 (println (str "Part one: " (day13-1 input)))
 
-(defn get-mod [bus]
-  (mod (- (last bus) (first bus)) (last bus)))
-
 (defn euclid [x y]
   (if (zero? (mod x y))
     [0 1 y]
