@@ -49,19 +49,13 @@ def part_one(startset, generations):
     for _ in range(generations):
         next_gen = get_next_gen_set(next_gen)
     return len(next_gen)
-#print(get_data_dict("Erik/inputs/day17-t1.txt"))
-#print(get_data_set("Erik/inputs/day17-t1.txt"))
 
-start_set = get_data_set("Erik/inputs/day17.txt")
-#print(get_next_gen_set(start_set))
-print(part_one(start_set,6))
-"""
-If a cube is active and exactly 2 or 3 of its neighbors are also active,
-    the cube remains active. Otherwise, the cube becomes inactive.
-If a cube is inactive but exactly 3 of its neighbors are active, the cube becomes active.
-    Otherwise, the cube remains inactive.
-"""
 
+p1_data = get_data_set("Erik/inputs/day17.txt")
+print(f"{part_one(p1_data,6)} cubes are active after the startup sequence")
+
+
+## 4 D - C O D E ##
 
 def get_data_set_4d(filename):
     active_set = set()
@@ -95,7 +89,7 @@ def get_adj_4d(coord, inset):
                         counter += 1
     return counter
 
-def get_next_gen_set(startset):
+def get_next_gen_set_4d(startset):
     x_range, y_range, z_range, w_range = get_ranges_4d(startset)
     next_gen = set()
 
@@ -116,9 +110,9 @@ def get_next_gen_set(startset):
 def part_two(startset, generations):
     next_gen = startset
     for _ in range(generations):
-        next_gen = get_next_gen_set(next_gen)
+        next_gen = get_next_gen_set_4d(next_gen)
     return len(next_gen)
 
 
-p2 = get_data_set_4d("Erik/inputs/day17.txt")
-print(part_two(p2,6))
+p2_data = get_data_set_4d("Erik/inputs/day17.txt")
+print(f"{part_two(p2_data,6)} ## 4 D ## cubes are active after the startup sequence")
